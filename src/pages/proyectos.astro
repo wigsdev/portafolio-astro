@@ -1,0 +1,31 @@
+---
+const proyectos = [
+    { nombre: "Pomodoro", descripcion: "Aplicación integral de gestión del tiempo." },
+    { nombre: "Blog Tecnológico", descripcion: "Posts sobre Tecnología" },
+    { nombre: "Conversor md-pdf", descripcion: "Aplicación para conversión de Markdown a PDF." },
+];
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Proyectos</title>
+    </head>
+    <body>
+        <h1>Proyectos</h1>
+        {proyectos.map((proyecto) => (
+            <article>
+                <h2>{proyecto.nombre}</h2>
+                <p>{proyecto.descripcion}</p>
+            </article>
+        ))}
+
+        <nav>
+			<a href="/">Inicio</a>
+			<a href="/sobre-mi/">Sobre mí</a>
+			<a href="/proyectos/">Proyectos</a>
+			<a href="/contacto/">Contacto</a>
+		</nav>
+    </body>
+</html>
