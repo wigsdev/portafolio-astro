@@ -1,8 +1,23 @@
 ---
 const proyectos = [
-    { nombre: "Pomodoro", descripcion: "Aplicación integral de gestión del tiempo." },
-    { nombre: "Blog Tecnológico", descripcion: "Posts sobre Tecnología" },
-    { nombre: "Conversor md-pdf", descripcion: "Aplicación para conversión de Markdown a PDF." },
+    {
+        nombre: "Pomodoro",
+        descripcion: "Aplicación integral de gestión del tiempo.",
+        imagen: "/pomodoro.jpg",
+        alt: "imagen de pomodoro apuntando a 25 minutos",
+    },
+    {
+        nombre: "Blog Tecnológico",
+        descripcion: "Posts sobre Tecnología",
+        imagen: "/blog.jpg",
+        alt: "laptop mostrando en pantalla pagina de blog",
+    },
+    {
+        nombre: "Conversor md-pdf",
+        descripcion: "Aplicación para conversión de Markdown a PDF.",
+        imagen: "/markdown-to-pdf.png",
+        alt: "imagen de conversor de markdown a pdf",
+    },
 ];
 ---
 
@@ -14,18 +29,21 @@ const proyectos = [
     </head>
     <body>
         <h1>Proyectos</h1>
-        {proyectos.map((proyecto) => (
-            <article>
-                <h2>{proyecto.nombre}</h2>
-                <p>{proyecto.descripcion}</p>
-            </article>
-        ))}
+        {
+            proyectos.map((proyecto) => (
+                <article>
+                    <img src={proyecto.imagen} alt={proyecto.alt} width="200"/>
+                    <h2>{proyecto.nombre}</h2>
+                    <p>{proyecto.descripcion}</p>
+                </article>
+            ))
+        }
 
         <nav>
-			<a href="/">Inicio</a>
-			<a href="/sobre-mi/">Sobre mí</a>
-			<a href="/proyectos/">Proyectos</a>
-			<a href="/contacto/">Contacto</a>
-		</nav>
+            <a href="/">Inicio</a>
+            <a href="/sobre-mi/">Sobre mí</a>
+            <a href="/proyectos/">Proyectos</a>
+            <a href="/contacto/">Contacto</a>
+        </nav>
     </body>
 </html>
