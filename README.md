@@ -1,43 +1,47 @@
-# Astro Starter Kit: Minimal
+# Portafolio personal
+
+Repositorio: [github.com/wigsdev/portafolio-astro](https://github.com/wigsdev/portafolio-astro)
 
 ```sh
 pnpm create astro@latest -- --template minimal
 ```
+## 🚀 Estructura del proyecto
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+Dentro del proyecto Astro encontrarás las siguientes carpetas y archivos:
 
 ```text
 /
 ├── public/
+│   ├── blog.jpg
+│   ├── cv.pdf
+│   ├── favicon.ico
+│   ├── favicon.svg
+│   ├── markdown-to-pdf.png
+│   └── pomodoro.jpg
 ├── src/
 │   └── pages/
-│       └── index.astro
-└── package.json
+│       ├── contacto.astro
+│       ├── index.astro
+│       ├── proyectos.astro
+│       └── sobre-mi.astro
+├── astro.config.mjs
+├── package.json
+├── pnpm-lock.yaml
+├── README.md
+└── tsconfig.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro busca archivos `.astro` o `.md` en el directorio `src/pages/`. Cada página se publica en una ruta que se determina a partir del nombre del archivo.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Puedes colocar recursos estáticos, como imágenes, en el directorio `public/`.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🧞 Comandos
 
-## 🧞 Commands
+Ejecuta todos los comandos desde una terminal abierta en la raíz del proyecto:
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
+| Comando                   | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| `pnpm install`             | Instala las dependencias del proyecto.           |
+| `pnpm run dev`             | Inicia el servidor de desarrollo en `localhost:4321`. |
+| `pnpm run build`           | Compila el sitio para producción en `./dist/`.   |
+| `pnpm run preview`         | Muestra localmente la compilación antes de publicarla. |
