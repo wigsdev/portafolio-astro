@@ -1,5 +1,5 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <html lang="es">
@@ -9,15 +9,19 @@
         <title>Sobre mí</title>
     </head>
     <body>
-        <h1>Sobre mí</h1>
-        <p>
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">Ver mi CV</a>
-        </p>
-        <nav>
-            <a href="/">Inicio</a>
-            <a href="/sobre-mi/">Sobre mí</a>
-            <a href="/proyectos/">Proyectos</a>
-            <a href="/contacto/">Contacto</a>
-        </nav>
+        <header>
+            <nav>
+                <a href="/">Inicio</a>
+                <a href="/sobre-mi/" aria-current="page">Sobre mí</a>
+                <a href="/proyectos/">Proyectos</a>
+                <a href="/contacto/">Contacto</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Sobre mí</h1>
+            <p>
+                <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">Ver mi CV</a>
+            </p>
+        </main>
     </body>
 </html>
