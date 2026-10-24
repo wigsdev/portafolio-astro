@@ -13,17 +13,17 @@ const { platform, url } = Astro.props;
   a {
     padding: 0.5rem 1rem;
     color: white;
-    background-color: #3157c8;
+    background-color: var(--color-brand);
     text-decoration: none;
     border-radius: 0.5rem;
   }
 
   a:hover {
-    background-color: #2446ad;
+    background-color: var(--color-brand-hover);
   }
 
   a:focus-visible {
-    outline: 2px solid #3157c8;
+    outline: 2px solid var(--color-brand-hover);
     outline-offset: 3px;
   }
 </style>
