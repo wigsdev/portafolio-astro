@@ -88,7 +88,7 @@ nav a:focus-visible {
 }
 
 .hero {
-    padding-block: clamp(3rem, 12vh, 7rem);
+    padding-block: clamp(1.5rem, 5vh, 3rem);
 }
 
 nav a[aria-current="page"] {
