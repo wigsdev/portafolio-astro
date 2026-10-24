@@ -1,0 +1,27 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav aria-label="Navegación principal">
+    <a href="/" aria-current={currentPath === "/" ? "page" : undefined}>
+        Inicio
+    </a>
+    <a
+        href="/sobre-mi/"
+        aria-current={currentPath === "/sobre-mi/" ? "page" : undefined}
+    >
+        Sobre mí
+    </a>
+    <a
+        href="/proyectos/"
+        aria-current={currentPath === "/proyectos/" ? "page" : undefined}
+    >
+        Proyectos
+    </a>
+    <a
+        href="/contacto/"
+        aria-current={currentPath === "/contacto/" ? "page" : undefined}
+    >
+        Contacto
+    </a>
+</nav>

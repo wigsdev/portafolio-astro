@@ -1,27 +1,12 @@
 ---
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Sobre mí</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="/">Inicio</a>
-                <a href="/sobre-mi/" aria-current="page">Sobre mí</a>
-                <a href="/proyectos/">Proyectos</a>
-                <a href="/contacto/">Contacto</a>
-            </nav>
-        </header>
-        <main>
-            <h1>Sobre mí</h1>
-            <p>
-                <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">Ver mi CV</a>
-            </p>
-        </main>
-    </body>
-</html>
+<BaseLayout
+  pageTitle="Sobre mí"
+  description="Conoce más sobre mí y consulta mi currículum."
+>
+  <p>
+    <a href="/cv.pdf" target="_blank" rel="noopener noreferrer"> Ver mi CV </a>
+  </p>
+</BaseLayout>

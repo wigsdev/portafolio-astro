@@ -1,0 +1,112 @@
+---
+interface Props {
+  nombre: string;
+  descripcion: string;
+  tecnologias: string[];
+  demoUrl?: string;
+  demoUnavailableMessage?: string;
+  githubUrl: string;
+}
+
+const {
+  nombre,
+  descripcion,
+  tecnologias,
+  demoUrl,
+  demoUnavailableMessage = "Demo no disponible",
+  githubUrl,
+} = Astro.props;
+---
+
+<article>
+  <div
+    class="project-preview"
+    role="img"
+    aria-label={`Vista previa pendiente para ${nombre}`}
+  >
+    Vista previa pendiente
+  </div>
+
+  <h2>{nombre}</h2>
+  <p>{descripcion}</p>
+
+  <ul class="project-technologies" aria-label="Tecnologías utilizadas">
+    {tecnologias.map((tecnologia) => <li>{tecnologia}</li>)}
+  </ul>
+
+  <div class="project-actions">
+    {
+      demoUrl ? (
+        <a href={demoUrl}>Demo</a>
+      ) : (
+        <span class="unavailable">{demoUnavailableMessage}</span>
+      )
+    }
+
+    <a href={githubUrl}>GitHub</a>
+  </div>
+</article>
+
+<style>
+  .project-preview {
+    display: grid;
+    aspect-ratio: 16 / 9;
+    place-items: center;
+    border-radius: 0.5rem;
+    color: #475569;
+    background-color: #e2e8f0;
+    text-align: center;
+  }
+
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .project-technologies li {
+    padding: 0.25rem 0.625rem;
+    border-radius: 999px;
+    color: #1e3a8a;
+    background-color: #e0e7ff;
+    font-size: 0.875rem;
+  }
+
+  .project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .project-actions a,
+  .unavailable {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .project-actions a {
+    color: white;
+    background-color: #3157c8;
+    text-decoration: none;
+  }
+
+  .project-actions a:hover {
+    background-color: #2446ad;
+  }
+
+  .project-actions a:focus-visible {
+    outline: 2px solid #3157c8;
+    outline-offset: 3px;
+  }
+
+  .unavailable {
+    color: #475569;
+    background-color: #e2e8f0;
+  }
+</style>

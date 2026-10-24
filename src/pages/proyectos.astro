@@ -1,64 +1,70 @@
 ---
-import "../styles/global.css";
-import { Image } from "astro:assets";
-import pomodoroImagen from "../assets/pomodoro.jpg";
-import blogImagen from "../assets/blog.jpg";
-import conversorImagen from "../assets/markdown-to-pdf.png";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 
 const proyectos = [
-    {
-        nombre: "Pomodoro",
-        descripcion: "Aplicación integral de gestión del tiempo.",
-        imagen: pomodoroImagen,
-        alt: "imagen de pomodoro apuntando a 25 minutos",
-    },
-    {
-        nombre: "Blog Tecnológico",
-        descripcion: "Posts sobre Tecnología",
-        imagen: blogImagen,
-        alt: "laptop mostrando en pantalla pagina de blog",
-    },
-    {
-        nombre: "Conversor md-pdf",
-        descripcion: "Aplicación para conversión de Markdown a PDF.",
-        imagen: conversorImagen,
-        alt: "imagen de conversor de markdown a pdf",
-    },
+  {
+    nombre: "Pomodoro",
+    descripcion:
+      "Una aplicación Pomodoro full-stack simple para ayudarte a gestionar tu tiempo y mantener la concentración.",
+    tecnologias: ["TypeScript", "JavaScript", "CSS", "HTML"],
+    githubUrl: "https://github.com/wigsdev/POMODORO-APP",
+  },
+  {
+    nombre: "Markdown - Pdf",
+    descripcion:
+      "Convierte documentos Markdown en PDF con estilos profesionales, tablas adaptables, resaltado de sintaxis y soporte para diagramas Mermaid.",
+    tecnologias: ["JavaScript", "Python", "CSS", "Shell"],
+    githubUrl: "https://github.com/wigsdev/markdown-pdf",
+  },
+  {
+    nombre: "OmniSpec IA",
+    descripcion:
+      "Plataforma de ingeniería SDD y seguridad serverless en AWS con Gemini Pro. Genera especificaciones EARS, audita repositorios GitHub y crea pull requests con pruebas pytest bajo supervisión humana.",
+    tecnologias: [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "Shell",
+      "Jinja",
+      "Dockerfile",
+    ],
+    demoUrl: "https://d140eqoid6qg8h.cloudfront.net/",
+    githubUrl: "https://github.com/wigsdev/omnispec-ai",
+  },
+  {
+    nombre: "Gestor de Biblioteca Digital",
+    descripcion:
+      "BookManager es una aplicación web interactiva que permite administrar el catálogo de una biblioteca digital en tiempo real.",
+    tecnologias: ["CSS", "JavaScript", "HTML", "Shell"],
+    demoUrl: "https://wigsdev.github.io/gestor-biblioteca-digital/",
+    githubUrl: "https://github.com/wigsdev/gestor-biblioteca-digital",
+  },
+  {
+    nombre: "Salesforce Admin Learning Platform",
+    descripcion:
+      "Plataforma web interactiva para la gestión y el aprendizaje del curso Salesforce Administrator.",
+    tecnologias: ["HTML", "Python", "CSS", "PowerShell", "Shell", "Batchfile"],
+    demoUrl: "https://admin-salesforce.onrender.com/login",
+    githubUrl: "https://github.com/wigsdev/salesforce_admin",
+  },
+  {
+    nombre: "Weather Dashboard",
+    descripcion:
+      "Aplicación web interactiva que permite consultar el estado del clima en tiempo real.",
+    tecnologias: ["JavaScript", "CSS", "HTML"],
+    demoUrl: "https://wigsdev.github.io/dashboard-clima/",
+    githubUrl: "https://github.com/wigsdev/dashboard-clima",
+  },
 ];
 ---
 
-<html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Proyectos</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="/">Inicio</a>
-                <a href="/sobre-mi/">Sobre mí</a>
-                <a href="/proyectos/" aria-current="page">Proyectos</a>
-                <a href="/contacto/">Contacto</a>
-            </nav>
-        </header>
-        <main>
-            <h1>Proyectos</h1>
-            <div class="proyectos-grid">
-                {
-                    proyectos.map((proyecto) => (
-                        <article>
-                            <Image
-                                src={proyecto.imagen}
-                                alt={proyecto.alt}
-                                loading="eager"
-                            />
-                            <h2>{proyecto.nombre}</h2>
-                            <p>{proyecto.descripcion}</p>
-                        </article>
-                    ))
-                }
-            </div>
-        </main>
-    </body>
-</html>
+<BaseLayout
+  pageTitle="Proyectos"
+  description="Explora proyectos de desarrollo, sus tecnologías y enlaces a demos y repositorios."
+>
+  <div class="proyectos-grid">
+    {proyectos.map((proyecto) => <ProjectCard {...proyecto} />)}
+  </div>
+</BaseLayout>

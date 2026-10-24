@@ -1,27 +1,12 @@
 ---
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Contacto</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="/">Inicio</a>
-                <a href="/sobre-mi/">Sobre mí</a>
-                <a href="/proyectos/">Proyectos</a>
-                <a href="/contacto/" aria-current="page">Contacto</a>
-            </nav>
-        </header>
-        <main>
-            <h1>Contacto</h1>
-            <p>
-                <a href="mailto:wigsdev@gmail.com">Escríbeme por correo</a>
-            </p>
-        </main>
-    </body>
-</html>
+<BaseLayout
+  pageTitle="Contacto"
+  description="Ponte en contacto conmigo por correo electrónico."
+>
+  <p>
+    <a href="mailto:wigsdev@gmail.com">Escríbeme por correo</a>
+  </p>
+</BaseLayout>

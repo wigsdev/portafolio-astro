@@ -1,0 +1,29 @@
+---
+interface Props {
+  platform: string;
+  url: string;
+}
+
+const { platform, url } = Astro.props;
+---
+
+<a href={url}>{platform}</a>
+
+<style>
+  a {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #3157c8;
+    text-decoration: none;
+    border-radius: 0.5rem;
+  }
+
+  a:hover {
+    background-color: #2446ad;
+  }
+
+  a:focus-visible {
+    outline: 2px solid #3157c8;
+    outline-offset: 3px;
+  }
+</style>
