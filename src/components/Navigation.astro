@@ -2,7 +2,11 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<nav aria-label="Navegación principal">
+<nav
+    class="primary-navigation"
+    id="primary-navigation"
+    aria-label="Navegación principal"
+>
     <a href="/" aria-current={currentPath === "/" ? "page" : undefined}>
         Inicio
     </a>
