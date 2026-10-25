@@ -81,6 +81,13 @@ const proyectos = [
   description="Explora proyectos de desarrollo, sus tecnologías y enlaces a demos y repositorios."
 >
   <div class="proyectos-grid">
-    {proyectos.map((proyecto) => <ProjectCard {...proyecto} />)}
+    {
+      proyectos.map((proyecto, index) => (
+        <ProjectCard
+          {...proyecto}
+          loading={index < 3 ? "eager" : "lazy"}
+        />
+      ))
+    }
   </div>
 </BaseLayout>
