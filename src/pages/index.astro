@@ -20,67 +20,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </p>
 
   <div class="hero-actions">
-    <a href="/proyectos/" class="hero-button hero-button--primary">
+    <a href="/proyectos/" class="btn btn--primary">
       Ver proyectos
     </a>
-    <a href="/contacto/" class="hero-button hero-button--secondary">
+    <a href="/contacto/" class="btn btn--secondary">
       Escríbeme
     </a>
   </div>
 </BaseLayout>
-
-<style>
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-block-start: 1.75rem;
-  }
-
-  .hero-button {
-    display: inline-flex;
-    min-height: 2.75rem;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    padding: 0.625rem 1.125rem;
-    border: 1px solid var(--color-brand);
-    border-radius: 0.5rem;
-    font-weight: 650;
-    text-decoration: none;
-    transition:
-      color 160ms ease,
-      background-color 160ms ease,
-      border-color 160ms ease;
-  }
-
-  .hero-button--primary {
-    color: #ffffff;
-    background-color: var(--color-brand);
-  }
-
-  .hero-button--primary:hover {
-    border-color: var(--color-brand-hover);
-    background-color: var(--color-brand-hover);
-  }
-
-  .hero-button--secondary {
-    color: var(--color-brand-hover);
-    background-color: transparent;
-  }
-
-  .hero-button--secondary:hover {
-    background-color: var(--color-brand-soft);
-  }
-
-  .hero-button:focus-visible {
-    outline: 2px solid var(--color-brand-hover);
-    outline-offset: 3px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .hero-button {
-      transition: none;
-    }
-  }
-</style>

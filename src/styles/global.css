@@ -5,10 +5,13 @@
     --color-brand-soft: #fce7ec;
     --color-text: #292429;
     --color-text-muted: #6b5a5e;
+    --color-text-inverse: #ffffff;
     --color-background: #faf8f8;
     --color-surface: #ffffff;
     --color-surface-muted: #f3ecee;
     --color-border: #e4dadd;
+    --color-github: #1f2328;
+    --color-github-hover-bg: #f3f4f6;
 }
 
 body {
@@ -302,8 +305,11 @@ p {
     margin-block-end: 1.5rem;
 }
 
+/* Reusable button system */
+.btn,
 .proyectos-github-button,
-.sobre-mi-button {
+.sobre-mi-button,
+.hero-button {
     display: inline-flex;
     min-height: 2.75rem;
     box-sizing: border-box;
@@ -313,28 +319,64 @@ p {
     border: 1px solid var(--color-brand);
     border-radius: 0.5rem;
     font-weight: 650;
-    color: var(--color-brand-hover);
-    background-color: transparent;
     text-decoration: none;
-    transition: background-color 160ms ease;
+    transition:
+        color 160ms ease,
+        background-color 160ms ease,
+        border-color 160ms ease;
 }
 
-.proyectos-github-button:hover,
-.sobre-mi-button:hover {
-    background-color: var(--color-brand-soft);
-}
-
+.btn:focus-visible,
 .proyectos-github-button:focus-visible,
-.sobre-mi-button:focus-visible {
+.sobre-mi-button:focus-visible,
+.hero-button:focus-visible {
     outline: 2px solid var(--color-brand-hover);
     outline-offset: 3px;
 }
 
+.btn--primary,
+.hero-button--primary {
+    border-color: var(--color-brand);
+    color: var(--color-text-inverse);
+    background-color: var(--color-brand);
+}
+
+.btn--primary:hover,
+.hero-button--primary:hover {
+    border-color: var(--color-brand-hover);
+    background-color: var(--color-brand-hover);
+}
+
+.btn--secondary,
+.proyectos-github-button,
+.sobre-mi-button,
+.hero-button--secondary {
+    border-color: var(--color-brand);
+    color: var(--color-brand-hover);
+    background-color: transparent;
+}
+
+.btn--secondary:hover,
+.proyectos-github-button:hover,
+.sobre-mi-button:hover,
+.hero-button--secondary:hover {
+    background-color: var(--color-brand-soft);
+}
+
 @media (prefers-reduced-motion: reduce) {
+    .btn,
     .proyectos-github-button,
-    .sobre-mi-button {
+    .sobre-mi-button,
+    .hero-button {
         transition: none;
     }
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-block-start: 1.75rem;
 }
 
 .bootcamp-link {
