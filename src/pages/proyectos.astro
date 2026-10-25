@@ -80,14 +80,29 @@ const proyectos = [
   pageTitle="Proyectos"
   description="Explora proyectos de desarrollo, sus tecnologías y enlaces a demos y repositorios."
 >
+  <p>
+    Proyectos destacados con foco en código limpio, Core Web Vitals e interfaces
+    interactivas.
+  </p>
+
   <div class="proyectos-grid">
     {
       proyectos.map((proyecto, index) => (
-        <ProjectCard
-          {...proyecto}
-          loading={index < 3 ? "eager" : "lazy"}
-        />
+        <ProjectCard {...proyecto} loading={index < 3 ? "eager" : "lazy"} />
       ))
     }
   </div>
+  <section class="proyectos-github">
+    <h2>Explora más en GitHub</h2>
+    <p>
+      Encuentra más proyectos, experimentos personales y código abierto en mi
+      perfil.
+    </p>
+    <a
+      href="https://github.com/wigsdev"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="proyectos-github-button">Ver mi GitHub</a
+    >
+  </section>
 </BaseLayout>
