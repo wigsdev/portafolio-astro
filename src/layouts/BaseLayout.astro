@@ -8,9 +8,10 @@ interface Props {
     pageTitle: string;
     description: string;
     mainClass?: string;
+    eyebrow?: string;
 }
 
-const { pageTitle, description, mainClass } = Astro.props;
+const { pageTitle, description, mainClass, eyebrow } = Astro.props;
 ---
 
 <!doctype html>
@@ -28,6 +29,7 @@ const { pageTitle, description, mainClass } = Astro.props;
     <body>
         <Header />
         <main class={mainClass}>
+            {eyebrow && <span class="page-eyebrow">{eyebrow}</span>}
             <h1>{pageTitle}</h1>
             <slot />
         </main>
