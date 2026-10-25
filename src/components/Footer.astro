@@ -6,13 +6,29 @@ const currentYear = new Date().getFullYear();
 
 <footer>
   <div class="social-links">
-    <Social
-      platform="Facebook"
-      url="https://web.facebook.com/wilmergulcochia/"
-    />
-    <Social platform="Instagram" url="https://www.instagram.com/wigsdev/" />
-    <Social platform="GitHub" url="https://github.com/wigsdev" />
-    <Social platform="LinkedIn" url="https://www.linkedin.com/in/wigsdev/" />
+    <p class="social-label">Sígueme</p>
+    <div class="social-icons">
+      <Social
+        platform="Facebook"
+        url="https://web.facebook.com/wilmergulcochia/"
+        iconSrc="/icons/social/facebook.svg"
+      />
+      <Social
+        platform="Instagram"
+        url="https://www.instagram.com/wigsdev/"
+        iconSrc="/icons/social/instagram.svg"
+      />
+      <Social
+        platform="GitHub"
+        url="https://github.com/wigsdev"
+        iconSrc="/icons/social/github.svg"
+      />
+      <Social
+        platform="LinkedIn"
+        url="https://www.linkedin.com/in/wigsdev/"
+        iconSrc="/icons/social/linkedin.svg"
+      />
+    </div>
   </div>
 
   <div class="footer-bottom">
@@ -29,10 +45,27 @@ const currentYear = new Date().getFullYear();
 
   .social-links {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--color-border);
+    padding-block: 1rem;
+    border-block: 1px solid var(--color-border);
+  }
+
+  .social-label {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
   }
 
   .footer-bottom {
