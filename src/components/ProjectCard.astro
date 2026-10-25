@@ -40,10 +40,10 @@ const {
   <ul class="project-technologies" aria-label="Tecnologías utilizadas">
     {
       tecnologias.slice(0, 3).map((tecnologia) => (
-        <li
-          class="technology-chip"
-        >
-          {tecnologia}
+        <li class="technology-chip">
+          <span class="chip-box">
+            <span class="chip-text">{tecnologia}</span>
+          </span>
         </li>
       ))
     }
@@ -117,14 +117,27 @@ const {
     list-style: none;
   }
 
-  .project-technologies li {
-    padding: 0.2rem 0.55rem;
-    border: 1px solid var(--color-border);
+  .technology-chip {
+    padding: 0;
+    margin: 0;
+  }
+
+  .chip-box {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem; /* 4px y 8px */
+    border: 1px solid var(--color-neutral);
     border-radius: 999px;
-    color: var(--color-text);
+    color: var(--color-neutral);
     background-color: var(--color-surface);
+  }
+
+  .chip-text {
+    padding: 0;
+    color: inherit;
     font-size: 0.75rem;
     font-weight: 600;
+    line-height: 1;
   }
 
   .project-actions {
