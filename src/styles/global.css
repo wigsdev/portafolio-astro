@@ -225,15 +225,17 @@ p {
 }
 /*@media (hover: hover) and (prefers-reduced-motion: no-preference) {}*/
 
-.proyectos-grid article {
-    transition:
-        transform 180ms ease,
-        box-shadow 180ms ease;
-}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .proyectos-grid article {
+        transition:
+            transform 180ms ease,
+            box-shadow 180ms ease;
+    }
 
-.proyectos-grid article:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgb(65 34 39 / 12%);
+    .proyectos-grid article:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgb(65 34 39 / 12%);
+    }
 }
 
 .hero {
