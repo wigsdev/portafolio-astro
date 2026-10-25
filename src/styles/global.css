@@ -47,7 +47,39 @@ body {
     display: inline-flex;
     flex-shrink: 0;
     align-items: center;
+    gap: 0.625rem;
     border-radius: 0.25rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.brand-logo {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.brand-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.25;
+}
+
+.brand-name {
+    color: var(--color-brand);
+    font-size: 1.125rem; /* 18px (text-lg) */
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.brand-role {
+    color: var(--color-text-muted);
+    font-size: 0.75rem; /* 12px (text-xs) */
+    line-height: 1.25;
 }
 
 .brand-link:focus-visible {
