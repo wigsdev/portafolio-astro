@@ -231,6 +231,10 @@ h1, h2 {
     letter-spacing: -0.02em;
 }
 
+h2 {
+    margin-block: 2rem 0.5rem;
+}
+
 p {
     max-width: 65ch;
 }
@@ -283,7 +287,8 @@ p {
     margin-block-end: 1.5rem;
 }
 
-.proyectos-github-button {
+.proyectos-github-button,
+.sobre-mi-button {
     display: inline-flex;
     min-height: 2.75rem;
     box-sizing: border-box;
@@ -299,19 +304,43 @@ p {
     transition: background-color 160ms ease;
 }
 
-.proyectos-github-button:hover {
+.proyectos-github-button:hover,
+.sobre-mi-button:hover {
     background-color: var(--color-brand-soft);
 }
 
-.proyectos-github-button:focus-visible {
+.proyectos-github-button:focus-visible,
+.sobre-mi-button:focus-visible {
     outline: 2px solid var(--color-brand-hover);
     outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .proyectos-github-button {
+    .proyectos-github-button,
+    .sobre-mi-button {
         transition: none;
     }
+}
+
+.bootcamp-link {
+    color: var(--color-brand);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.bootcamp-link:hover {
+    color: var(--color-brand-hover);
+    text-decoration: underline;
+}
+
+.bootcamp-link:focus-visible {
+    border-radius: 0.125rem;
+    outline: 2px solid var(--color-brand-hover);
+    outline-offset: 3px;
+}
+
+.sobre-mi-actions {
+    margin-block-start: 1.5rem;
 }
 
 .hero {
